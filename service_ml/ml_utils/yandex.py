@@ -138,26 +138,6 @@ class YaContinuer(YandexGPT):
         super().__init__(role, temperature, stream, max_tokens, return_if_default)
 
 
-class YaCVMaker(YandexGPT):
-    """Class made for fast making CV from brief."""
-    def __init__(self, temperature: float = 0.4, *args, **kwargs):
-        """Init func of YaCVMaker class.
-
-        :param temperature: How creative model is.
-        """
-        role = """Тебе нужно по краткой информации о пользователе создать для него резюме из следующих пунктов:
-        1. Софт скиллы
-        2. Хард скиллы
-        3. Опыт работы
-        4. Общая инфоормация
-        """
-        stream = False
-        max_tokens = 400
-        return_if_default = True
-
-        super().__init__(role, temperature, stream, max_tokens, return_if_default)
-
-
 class YaTranslator:
     """Class made for translation task implemented via YandexAPI."""
     def __init__(self, *args, **kwargs):

@@ -31,5 +31,4 @@ available_models: Dict[str, MLModelStorer] = {
     "Translator": MLModelStorer(yandex.YaTranslator),
     "Continuer": MLModelStorer(yandex.YaContinuer),
     "GPT": MLModelStorer(yandex.YandexGPT),
-    "CVMaker": MLModelStorer(yandex.YaCVMaker),
 }
