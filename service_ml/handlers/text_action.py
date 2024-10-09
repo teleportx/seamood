@@ -37,8 +37,3 @@ async def gpt_prompt(body: GPTModel):
     model.stream = body.dialogue
     return TextModel(text=await model(prompt=body.text))
 
-
-@router.post("/api/ml/text/getcv")
-async def make_cv(body: TextModel):
-    model = available_models["CVMaker"].model
-    return TextModel(text=await model(prompt=body.text))
